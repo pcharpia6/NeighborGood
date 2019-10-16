@@ -6,6 +6,7 @@ function LoginForm(props) {
     return ( 
       <form id="loginForm" className="form">
       <h3>Login:</h3>
+      <h6>admin/admin to test</h6>
       <input
         value={props.formState}
         name="email"

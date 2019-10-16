@@ -6,6 +6,7 @@ function RegisterForm(props) {
   return (
     <form className="form" id="registerForm" >
       <h3>Register:</h3>
+      <h6>This app is not currently secure: please do not use sensitive information or your regular passwords.</h6>
       <input
         value={props.formState.username}
         name="username"

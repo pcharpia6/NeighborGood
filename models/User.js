@@ -15,9 +15,9 @@ const UserSchema = new Schema({
     required: "Password is Required",
     validate: [
       function(input) {
-        return input.length >= 8;
+        return input.length >= 5;
       },
-      "Password should be at least 8 characters."
+      "Password should be at least 5 characters."
       // TODO: use regex to make a more impactful password requirement or replace this with passport auth
     ]
   },
