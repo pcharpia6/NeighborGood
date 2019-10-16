@@ -3,7 +3,6 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes");
-const flash = require("connect-flash");
 
 const session = require("express-session");
 const passport = require("./passport");
@@ -24,16 +23,6 @@ app.use(
     saveUninitialized: false
   })
 );
-
-// Flash
-app.use(flash());
-
-// Global Vars
-app.use((req, res, next) => {
-  res.locals.success_msg = req.flash("success_msg");
-  res.locals.error_msg = req.flash("error_msg");
-  next();
-});
 
 // Passport
 app.use(passport.initialize());
